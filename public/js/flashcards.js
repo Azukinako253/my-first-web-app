@@ -36,9 +36,10 @@ export async function setupFlashcards() {
             <p class="flashcard-title">${word.word}</p>
             <div class="flashcards-icons">
              <button class="flashcard-meaning" data-toggle="${word.id}"><span class="ri-eye-line"></span></button>
-          </div>
-          <div data-meaning="${word.id}" class="hidden">
-            <p>${word.meaning}</p>
+            </div>
+            <div data-meaning="${word.id}" class="hidden">
+              <p>${word.meaning}</p>
+            </div>
           </div>
         </div>
       `;

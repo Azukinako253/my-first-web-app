@@ -28,7 +28,3 @@ export function setupTabs() {
     flashcardsSection.classList.remove("hidden");
   });
 }
-
-document.addEventListener("DOMContentLoaded", setupTabs);
-
-export default setupTabs;
