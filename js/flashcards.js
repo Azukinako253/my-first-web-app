@@ -1,7 +1,7 @@
 // サーバーからデータを取得する関数を作成してください
 async function fetchFlashcards() {
   try {
-    const response = await fetch("/api/flashcards");
+    const response = await fetch("data/flashcards.json");
     const data = await response.json();
     return data;
   } catch (error) {
