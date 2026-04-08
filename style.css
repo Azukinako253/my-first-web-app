@@ -225,3 +225,42 @@ main {
   margin: 0 auto;
   /* ↑margin: 0 auto;とwidth:80%;で中央寄せの上のvalueやfromとtoに位置を合わせている */
 }
+
+/* フラッシュカードのスタイル */
+#flashcards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 20px;
+}
+.flashcard {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.flashcard-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #30678f;
+  margin-bottom: 10px;
+}
+.flashcard-meaning {
+  background: none;
+  border: 1px solid #30678f;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  color: #30678f;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.flashcard-meaning:hover {
+  background-color: #30678f;
+  color: #fff;
+}
