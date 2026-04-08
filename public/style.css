@@ -1,0 +1,227 @@
+/* ブラウザで設定されているスタイルのリセット・共通設定 */
+/* 消さないでください */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+select,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* スタイルのリセット終了 */
+
+/* サイドバーとメインコンテンツを包むための要素のスタイルを書いてください */
+.container {
+  display: flex;
+  /* ↑ここにflexをつけることでasideとmainがwidth20%,80%も左右配置になってくれる！ */
+  height: 100vh;
+  margin: 10px;
+  border: 1px solid #e0e0e0;
+}
+
+/* サイドバーに関連するスタイルを書いてください */
+aside {
+  width: 20%;
+   /* ↑containerにdisplay flexをつけてるからtext-alignなしでも左配置になる */ */
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  border-right: 1px solid #e0e0e0;
+  height: 100%;
+}
+.aside-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+/* aside p {　→ｐタグをaタグに変更したため不要
+  font-size: 16px;
+  font-weight: bold;
+  color: #30678f;
+  display: inline-block;
+}
+aside p:hover {
+  cursor: pointer;
+} */
+
+.logo {
+  font-size: 16px;
+  color: #30678f;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: default;
+  display : block;
+}
+.logo:hover {
+  cursor: pointer;
+  background-color: #d9e7f3;
+}
+.aside-nav {
+  margin: 30px 0px 10px 10px;
+  color: #30678f;
+  font-weight: 500;
+}
+.favi {
+  font-size: 20px;
+  vertical-align: middle;
+  margin-right: 4%;
+}
+.siderber-menu-item {
+  padding: 10px 0;
+  cursor: default;
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+.siderber-menu-item:hover {
+  cursor: pointer;
+  background-color: #d9e7f3;
+}
+
+/* メインコンテンツに関連するスタイルを書いてください */
+main {
+  height: 100%;
+  width: 80%;
+}
+.main-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: center;
+  padding-bottom: 50px;
+}
+.profile-icon {
+  background-color: #30678f;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+}
+.icon {
+  display: inline-block;
+  margin-top: 17px;
+  font-size: 25px;
+  color: white;
+}
+.main-header h1 {
+  font-size: 24px;
+  margin-top: 10px;
+}
+.main-header p {
+  font-size: 16px;
+  margin-top: 10px;
+  opacity: 0.6;
+}
+.message-wrapper {
+  padding: 20px;
+  width: 60%;
+  margin: 0 auto;
+}
+.message-wrapper p {
+  font-size: 14px;
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  opacity: 0.6;
+}
+.hidden {
+  display: none;
+}
+/* .content-section{←普通に考えてこのクラス必要ですか？省きました
+  width: 100%;
+  text-align: center;
+  background-color: #c5c7c9;
+}  */
+  .section-header1{
+    text-align: center;
+    background-color: goldenrod;
+  }
+.section-header1 h2{
+  font-size: 20px;
+  padding: 20px 0 30PX 0px;
+  border-bottom:1px solid #e0e0e0;
+  gap: 15px;
+}
+.section-header2{
+    text-align: center;
+    background-color: lightseagreen;
+  }
+.section-header2 h2{
+  font-size: 20px;
+  padding: 20px 0 30PX 0px;
+  border-bottom:1px solid #e0e0e0;
+  gap: 15px;
+}
+.section-body1{
+  border: 1px solid #e0e0e0;
+  width :60%;
+  margin: 0 auto;
+  padding: 30px 0px;
+  background-color:#ccc;
+  text-align: center;
+}
+.section-body2{
+  border: 1px solid #e0e0e0;
+  width :100%;
+  margin: 0 auto;
+  padding: 30px 0px;
+  background-color:#ccc;
+}
+.converter-input{
+  width: 50%;
+  padding: 3px 8px;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  display:block;
+  
+}
+.converter-form{
+  display: block;
+  text-align: center;
+  width: 80%; 
+  margin: 0 auto;
+  /* こいつはinputのコンテナ */
+}
+.select{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 80%;
+  margin: 10px auto;
+  /* こいつはfrom/toのコンテナ */
+}
+.selectr-from, .selectr-to{
+  font-size: 14px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 10px 0PX;
+  width: 100%;
+}
+.converter-result{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: blue;
+  background-color: #e0e0e0;
+  padding : 20px;
+  border-radius : 5px;
+  width: 80%;
+  margin: 0 auto;
+  /* ↑margin: 0 auto;とwidth:80%;で中央寄せの上のvalueやfromとtoに位置を合わせている */
+}

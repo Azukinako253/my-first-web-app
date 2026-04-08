@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+        <aside>
+          <header class="aside-header">
+            <a href="#" class="logo" data-tab="home"><span class="ri-home-line"></span>Home</a>
+            <!-- <p></p>→ここにHome記入してたけどボタンじゃないから<a>に入れなおした -->
+          </header>
+          <nav class="aside-nav">
+            <ul>
+              <li class="siderber-menu-item tab-item" data-tab="converter">
+                <span class="favi ri-scales-3-line"></span>Unit Converter
+              </li>
+              <li class="siderber-menu-item tab-item"    data-tab="flashcards">
+                <span class="favi ri-book-line"></span>Flashcards
+              </li>
+            </ul>
+          </nav>
+        </aside>
+      <main>
+        <section id="home">
+          <header class="main-header">
+            <div class="profile-icon">
+              <span class="icon ri-user-smile-line"></span>
+            </div>
+            <h1>Welcome to Your Personal Dashboard</h1>
+            <p>Make your daily life more convenient and enjoyable</p>
+          </header>
+          <div class="message-wrapper">
+            <p>This dashboard is a tool to enrich your daily life. You can easily use essential features such as diary entries, memo management, and checking weather information.</p>
+            <p>Small daily records become irreplaceable memories, and efficient task management leads to fulfilling days. Please use this as a partner that supports your everyday life.</p>
+          </div>
+        </section>
+        <section id="converter" class="content-section hidden">
+          <header class="section-header1">
+            <h2><span class="ri-scales-3-line"></span>Length Unit Conversion</h2>
+          </header>
+          <div class="section-body1">
+            <legend>Length Unit Conversion</legend>
+            <div class="converter-form">
+              <label for="value">value:</label>
+              <input type="number" id="value" class="converter-input" value="1000">
+            </div>
+            <div class="select">
+               <div class="converter-form">
+                 <label for="from" >From:</label>
+                 <select class="selectr-from" id="from"></select>
+              </div>
+               <div class="converter-form">
+                 <label for="to" >To:</label>
+                 <select class="selectr-to" id="to">
+                 </select>
+              </div>
+            </div>
+            <div class="converter-result">
+              <!-- ここはconverter.jsで「converterResult.textContent = `${inputValue} ${fromName} = ${convertedValue.toFixed(3)} ${toName}`;
+」と表記され、わざわざテキストタグはつけんでいい！ -->
+            </div>
+          </div>
+        </section>
+        <section id="flashcards" class="content-section hidden">
+          <header class="section-header2">
+            <h2><span class="ri-book-line"></span>Flashcards</h2>
+          </header>
+          <div class="section-body2">
+            <div class="flashcards-intro" id="flashcards-list">
+              
+          </div>
+        </section>  
+
+      </main>
+    </div>
+    <script src="main.js" type="module"> </script>
+    <!-- ↑ここでscriptの読み込みが必要！！！！！！！！！ -->
+  </body>
+
+</html>
